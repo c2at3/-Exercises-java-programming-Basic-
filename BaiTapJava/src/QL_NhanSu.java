@@ -106,7 +106,6 @@ public class QL_NhanSu {
 		ql.hienThiDS();
 		System.out.println("================TIM KIEM NHAN SU==============");
 		ql.timKiem();
-
 	}
 
 }
