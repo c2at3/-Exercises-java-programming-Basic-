@@ -199,4 +199,73 @@ public class QL_NhanSu {
 
 ```
  ***
+## Bài 2: Phân Số
+
+``` java
+import java.util.Scanner;
+
+public class PhanSo {
+
+	private int tuSo;
+	private int mauSo;
+
+	public void nhapDL() {
+		Scanner sc = new Scanner(System.in);
+		do {
+			try {
+				sc = new Scanner(System.in);
+				System.out.print("Nhap Tu so: ");
+				tuSo = Integer.parseInt(sc.nextLine());
+				System.out.print("Nhap Mau so: ");
+				mauSo = Integer.parseInt(sc.nextLine());
+			} catch (Exception e) {
+				tuSo = 0;
+				mauSo = 0;
+			}
+			if (mauSo == 0)
+				System.err.println("Nhap sai!!!\nMau so phai khac 0!\nMau so la mot so\nNhap lai!!");
+		} while (mauSo == 0);
+
+	}
+
+	public void hienDL() {
+		System.out.println("Phan so vua nhap: " + tuSo + "/" + mauSo);
+	}
+
+	public int UCLN(int tuSo, int mauSo) {
+		tuSo = this.tuSo;
+		mauSo = this.mauSo;
+		tuSo = Math.abs(tuSo);
+		mauSo = Math.abs(mauSo);
+		if (tuSo == 0) {
+			return 1;
+		}
+		while (tuSo != mauSo) {
+			if (tuSo > mauSo) {
+				tuSo -= mauSo;
+			} else {
+				mauSo -= tuSo;
+			}
+		}
+		return mauSo;
+	}
+
+	public void rutGon() {
+		int UCLN = UCLN(tuSo, mauSo);
+		tuSo = tuSo / UCLN;
+		mauSo = mauSo / UCLN;
+		System.out.println("Dang toi gian: " + tuSo + "/" + mauSo);
+	}
+
+	public static void main(String[] args) {
+		PhanSo ps = new PhanSo();
+		ps.nhapDL();
+		ps.hienDL();
+		ps.rutGon();
+	}
+
+}
+
+```
+ ***
 **_Contact me_**: [Trần Bá Quang](https://www.facebook.com/quang.tranba.37)
