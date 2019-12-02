@@ -83,7 +83,7 @@ public class QL_KhachHang {
 			kh[i].hienThi();
 		}
 	}
-	
+
 	public void sapXep() {
 		KhachHang tg;
 		for(int i = 0;i<n;i++) {
