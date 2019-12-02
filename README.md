@@ -1,5 +1,6 @@
 # Bài tập Lập trình Java cơ bản - ICTU
-## Bài 1: bài tập tổng hợp 11
+## Bài 1:
+Bài tập tổng hợp 11
 ### **Câu 1**: Lớp các bài toán phương trình bậc 2 có dạng: ax2 + bx + c = 0 với a, b, c là các hệ số được nhập từ bàn phím.
 Hãy xây dựng lớp PTBacHai có các thuộc tính a, b, c và có các phương thức:
 
